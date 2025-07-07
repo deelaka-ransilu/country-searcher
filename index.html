@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Searcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black flex justify-center items-center min-h-screen">
+    <div
+      id="container"
+      class="bg-gray-700 rounded-2xl shadow-2xl p-6 w-[500px] flex flex-col gap-4"
+    >
+      <!-- search input -->
+      <div class="flex gap-2">
+        <input
+          id="countryInput"
+          type="text"
+          placeholder="Enter country name"
+          class="w-full h-[50px] rounded-lg border border-gray-300 px-4 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        />
+        <button
+          id="btnSearch"
+          onclick="btnSearchOnClick()"
+          class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
+        >
+          Search
+        </button>
+      </div>
+      <p id="errorMessage" class="text-red-500 text-sm"></p>
+
+      <!-- results card -->
+      <div
+        id="countryCard"
+        class="flex flex-col items-center justify-center bg-gray-100 rounded-xl shadow-inner p-4 gap-4 overflow-auto hidden"
+      >
+        <div class="flex justify-center">
+          <img
+            id="countryFlag"
+            src=""
+            alt="Country Flag"
+            class="w-24 h-16 object-cover rounded shadow"
+          />
+        </div>
+        <p id="commonName" class="text-gray-600 text-sm font-bold"></p>
+        <p id="officialName" class="text-gray-600 text-sm font-bold"></p>
+        <p id="capital" class="text-gray-700 text-sm font-bold"></p>
+        <p id="population" class="text-gray-700 text-sm font-bold"></p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
